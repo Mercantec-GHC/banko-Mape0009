@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 class Program
-{
-
-
-
+{ 
     //ID: 1
     static List<string> plade1Række1 = new List<string> { "20", "30", "43", "55", "70" };
     static List<string> plade1Række2 = new List<string> { "4", "14", "33", "44", "67" };
@@ -29,39 +26,7 @@ class Program
         do
         {
             // Dette skriver pladerne ud
-            Console.WriteLine("Plade 1");
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række1[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række2[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række3[i] + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Plade 2");
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række1[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række2[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række3[i] + " ");
-            }
-            Console.WriteLine();
+            DisplayPlader();
             Console.WriteLine();
 
             //En variabel, som bliver brugt til at interagere med listerne
@@ -112,39 +77,7 @@ class Program
 
         do
         {
-            Console.WriteLine("Plade 1");
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række1[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række2[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række3[i] + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Plade 2");
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række1[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række2[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række3[i] + " ");
-            }
-            Console.WriteLine();
+            DisplayPlader();
             Console.WriteLine();
 
             Console.Write("Indsæt tallene her: ");
@@ -187,39 +120,7 @@ class Program
 
         do
         {
-            Console.WriteLine("Plade 1");
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række1[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række2[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade1Række3[i] + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Plade 2");
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række1[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række2[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(plade2Række3[i] + " ");
-            }
-            Console.WriteLine();
+            DisplayPlader();
             Console.WriteLine();
 
             Console.Write("Indsæt tallene her: ");
@@ -314,6 +215,26 @@ class Program
                     Console.WriteLine(trukketTal + " er på Plade 2");
                 }
             }
-        }       
+        }
+        static void DisplayRække(List<string> række)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(række[i]+ " ");
+            }
+            Console.WriteLine();
+        }
+        static void DisplayPlader()
+        {
+            Console.WriteLine("Plade 1");
+            DisplayRække(plade1Række1);
+            DisplayRække(plade1Række2);
+            DisplayRække(plade1Række3);
+            Console.WriteLine();
+            Console.WriteLine("Plade 2");
+            DisplayRække(plade2Række1);
+            DisplayRække(plade2Række2);
+            DisplayRække(plade2Række3);
+        }
     }
 }
